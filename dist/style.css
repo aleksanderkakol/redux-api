@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e1eef6; }
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  background: linear-gradient(to top, #ff5f2e, #fcbe32);
+  box-shadow: 0 0 100px 1px #acacac; }
+
+.header {
+  background-color: transparent; }
+  .header h1 {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 3rem; }
+  .header ul {
+    padding: 20px 0;
+    display: flex;
+    list-style: none;
+    justify-content: space-around; }
+    .header ul li a {
+      text-decoration: none;
+      font-size: 1.8rem;
+      color: black; }
+      .header ul li a:hover {
+        color: #004e66; }
+
+.info {
+  padding: 50px 0;
+  transition: opacity 300ms ease-in-out 1s; }
+
+.userInfo {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column; }
+  .userInfo li {
+    padding: 10px 0; }
+
+.main {
+  text-align: center;
+  transition: 1s; }
+  .main h2 {
+    padding: 20px 0;
+    font-size: 1.8rem; }
+  .main ul {
+    list-style: none;
+    font-size: 1.8em; }
+    .main ul li a {
+      text-decoration: none;
+      color: #004e66; }
+      .main ul li a:hover {
+        font-weight: bold; }
+
+.loader {
+  background-color: transparent;
+  width: 100%;
+  height: 100%; }
+  .loader::before {
+    content: "";
+    height: 8rem;
+    width: 8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -4em 0 0 -4em;
+    background: #e1eef6;
+    animation: 2s bounce linear infinite; }
+  .loader::after {
+    content: "";
+    height: .5em;
+    width: 8em;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    margin: 0 0 -5.75em -4em;
+    border-radius: 100%;
+    background-color: #D1D5D8;
+    animation: 1s shadow linear infinite; }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2.125em);
+    border-radius: 0; }
+  12.5% {
+    border-radius: 0; }
+  25% {
+    transform: translateY(2.125em) rotate(45deg);
+    border-bottom-right-radius: 100%; }
+  37.5% {
+    border-radius: 0; }
+  50% {
+    transform: translateY(-2.125em) rotate(90deg);
+    border-radius: 0; }
+  62.5% {
+    border-radius: 0; }
+  75% {
+    transform: translateY(2.125em) rotate(135deg);
+    border-top-right-radius: 100%; }
+  87.5% {
+    border-radius: 0; }
+  100% {
+    transform: translateY(-2.125em) rotate(180deg);
+    border-radius: 0; } }
+
+@keyframes shadow {
+  0% {
+    width: 8em; }
+  50% {
+    width: 6.65685424949238em;
+    margin-left: -3.82842712474619em;
+    background-color: darkgrey; }
+  100% {
+    width: 8em; } }
